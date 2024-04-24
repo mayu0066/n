@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="PostgresTables" targetRuntime="MyBatis3">
+  	<jdbcConnection connectionURL="jdbc:postgresql://localhost:5432/postgres" driverClass="org.postgresql.Driver"
+  		password="1228" userId="postgres" ></jdbcConnection>
+  	<javaModelGenerator targetPackage="com.example.demo.domain.model" targetProject="dms_training-1/src/main/java" >
+  		<property name="enableSubPackages" value="true" ></property><property
+  			name="trimStrings" value="true" ></property></javaModelGenerator>
+  	<sqlMapGenerator targetPackage="com.example.demo.domain.mapper" targetProject="dms_training-1/src/main/resources">
+  		<property name="enableSubPackages" value="true" ></property></sqlMapGenerator>
+  	<javaClientGenerator targetPackage="com.example.demo.domain.mapper" targetProject="dms_training-1/src/main/java"
+  		type="XMLMAPPER" >
+  		<property name="enableSubPackages" value="true" ></property></javaClientGenerator>
+  	<table tableName="MST_DEVICE">
+  		<property name="useActualColumnNames" value="true"></property>
+  	</table>
+  </context>
+</generatorConfiguration>
