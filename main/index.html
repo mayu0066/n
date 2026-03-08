@@ -1,96 +1,165 @@
 <!DOCTYPE html>
 <html>
+<!-- =========================
+                設定
+    ========================== -->
     <head>
+        <!-- 文字コードをUTF-8に設定 -->
         <meta charset="utf-8">
+        <!-- スマホの画面幅に合わせてページ幅を調整 -->
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta property='og:type' content='website'>
-        <meta property='og:title' content='エンジニア M.N. ポートフォリオ'>
-        <meta property='og:description' content='M.N.のポートフォリオサイトです。'>
-        <meta name="description" content="M.N.のポートフォリオサイトです" />
+        <!-- 検索エンジン向けの説明文 -->
+        <meta name="description" content="M.N.のポートフォリオ" />
+        <!-- ブラウザタブに表示されるタイトル -->
         <title>M.N. ポートフォリオ</title>
+        <!-- 先に文字のフォントを読み込み表示を高速化　フォントサーバー：Google Fonts フォント名：Montserrat -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-            rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined"
-            rel="stylesheet">
-        <link href="css/ress.css" media="all" rel="stylesheet"
-            type="text/css" />
-        <link href="css/style.css" media="all" rel="stylesheet"
-            type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Material Icons の読み込み -->
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+        <!-- リセットCSS（ブラウザごとの初期設定差をなくす） -->
+        <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+        <!-- CSSを取り込む -->
+        <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
     </head>
-
+<!-- =========================
+            ポートフォリオ
+    ========================== -->
     <body>
         <div class="wrapper">
-
-            <!-- header -->
-            <header class="header ">
+            <!-- =========================
+                         ヘッダ
+                ========================== -->
+            <header class="header">
                 <div class="container">
-                    <h1 class="header-logo">
-                        <a href=".">M.N.</a>
-                    </h1>
+                    <a href="#top" class="header-logo">M.N.</a>
+                    <!-- グローバルナビゲーション -->
                     <nav class="gnav">
                         <ul class="gnav-list">
-                            <li class="gnav-item"><a
-                                    href="#works">WORKS</a></li>
-                            <li class="gnav-item"><a
-                                    href="#skill">SKILL</a></li>
-                            <li class="gnav-item"><a
-                                    href="#about">ABOUT</a></li>
+                            <li class="gnav-item"><a href="#works">WORKS</a></li> <!-- WORKSセクションへのリンク-->
+                            <li class="gnav-item"><a href="#skill">SKILL</a></li> <!-- SKILLセクションへのリンク-->
+                            <li class="gnav-item"><a href="#ABOUT">ABOUT</a></li> <!-- ABOUTセクションへのリンク-->
                         </ul>
                     </nav>
                 </div>
             </header>
-            <!-- /header -->
-
+        <!-- =========================
+                    メインコンテンツ
+            ========================== -->
             <main class="content">
+            <!-- =========================
+                        ページトップ
+                ========================== -->
+                <div class="top" id="top">
+                    <div class="top-container">
+                        <div class="top-title">M.N.</div>
+                        <div class="top-subtitle">PORTFOLIO</div><br>
 
-                <!-- mv -->
-                <div class="mv">
-                    <div class="mv-container">
-                        <p class="mv-title">M.N.</p>
-                        <p class="mv-subtitle">PORTFOLIO</p>
-                        <p class="mv-text">
-                            ユーザーとお客様が心から満足できる<br
-                                class="sp-only">サービスを提供いたします。<br>
-                            コーディングは<br class="sp-only">おまかせください。<br>
-                        </p>
+                        <!-- スマホ時に改行を制御するための <br class="sp-only"> -->
+                        <div class="top-text">
+                            ユーザーとお客様が心から満足できる<br class="sp-only">
+                            サービスを提供いたします。<br>
+                        </div>
                     </div>
                 </div>
-                <!-- /mv -->
-
-                <!-- works -->
+            <!-- =========================
+                        WORKS セクション
+                ========================== -->
                 <section class="works section" id="works">
                     <div class="container">
-                        <h2 class="title">WORKS</h2>
+                        <h2 class="title js--fade-title">WORKS</h2>
+                        <!-- =========================
+                                自動運転機能開発 セクション
+                            ========================== -->
+                        <section class="hero js--fade-item"> 
+                            <div class="hero-text js--fade-item"> 自動運転車<br>Auto Parking System機能開発</div>
+                        </section>
+                        <!-- =========================
+                                WORKS LIST セクション
+                            ========================== -->                        
                         <div class="works-list">
-                            <!-- ADS -->
-                            <a class="works-item" href="works-ADS.html">
-                                <div class="works-img">
-                                <img src="img/ADS/law_safety_standard.png" alt="国際規格翻訳・A-SPICE対応付け" />
+                            <h2 class="works-item-name js--fade-title">量産開発 - 自動運転駐車の機能 Auto Parking System(APS)</h2>
+                            <div class="works-content js--fade-item">
+                                <img class="works-img" src="img/APS/自動駐車.png" />
+                                <p class="works-text"> 自動運転車の駐車機能であるAPSソフトウェアの開発に携わりました。<br><br> 
+                                    APS機能は、Lidar, 魚眼カメラ, サラウンドビューシステムなどのセンサー情報をもとに、<br> 
+                                    駐車スペースを検出し、ステアリング・アクセル・ブレーキを自動制御して安全に駐車を完了。 <br><br> 
+                                    ECU 上で動作する駐車制御機能として実装されており、各種センサから取得した <br> 
+                                    入力データをもとに周辺環境を認識し、その情報をリアルタイムに演算して車両制御用の <br> 
+                                    CAN 信号を生成します。 さらに、HMI へは AI モデルを用いて処理した周辺環境の画像や <br>
+                                    駐車ガイド情報を出力し、ドライバーに分かりやすい形で駐車状況を提示します<br><br>
+                                    要件定義〜開発〜テスト〜リリースとV字プロセス全体に渡って様々な角度で関わり、<br>
+                                    学ぶ機会の豊富な現場でした<br>
+                                </p>
+                            </div>
+                            <div class="works-content js--fade-title">
+                                <div class="works-icon"><img src="./img/utirity/Check矢印.png" /></div>
+                                <h2 class="works-item-name">Check!</h2>                                
+                                <details>
+                                <summary class="works-summary">もっと見る</summary>
+                                <div class="works-content">
+                                    <img class="works-image-middle" src="./img/APS/アーキ図.png" />
+                                    <p class="works-text-sammary">Autosar Classic Platform / Autosar Adaptive Platform を組み合わせた<br>
+                                        マルチプラットフォーム構成のECU 開発において、要求仕様の整理から<br>
+                                        開発支援、統合、検証まで一連の工程を担当しました。<br><br><br>
+                                        Classic と Adaptive が混在する複雑な ECU 構成の中で、各プラットフォーム間の連携、<br>
+                                        通信仕様の整合性確認、ミドルウェア環境構築、動作検証など幅広い領域に携わり、<br>
+                                        車載ソフトウェア開発における実践的な知見を深めることができました。<br><br></p>
                                 </div>
-                                <p class="works-name">国際規格翻訳 & A-SPICE プロセス対応付け</p>
-                                <p class="works-info">Legal Standard / Documentation / Process Mapping</p>
-                            </a>
-                            <!-- SOTIF -->
-                            <a class="works-item" href="works-SOTIF.html">
-                                <div class="works-img">
-                                <img src="img/SOTIF/SOTIF.png" alt="SOTIF" />
+                                    <table border="1">
+                                    <tr><th>【開発環境/仮想環境】</th><td>WSL（Windows<br> Subsystem<br> for Linux）</td><td>python</td><td>C++</td><td>Docker</td><td>VirtualBox</td><td></td><td></td></tr>
+                                    <tr><th>【検証・解析ツール】</th><td>Vector Canape<br>CANoe<br>Canalyzar</td><td>IrfanView</td><td>YuvViewer</td><td>QNX Momentics</td><td>QNX software senter</td><td>Winmarge</td><td></td></tr>
+                                    <tr><th>ネットワーク / 通信ツール】</th><td>Wireshark</td><td>tcpdump</td><td>telnet</td><td>ssh</td><td>curl</td><td>PCAT</td><td>WinSCP</td></tr>
+                                    <tr><th>【ミドルウェア / OS】</th><td>AUTOSAR Classic Platform</td><td>AUTOSAR Adaptive Platform</td><td>Windows</td><td>Ubuntu</td><td>QNX</td><td></td><td></td></tr>
+                                    <tr><th>【バージョン管理】</th><td>Git</td><td>GitHub</td><td>GitLab</td><td>SVN</td><td></td><td></td><td></td></tr>
+                                    <tr><th>【課題管理、問題解決管理<br>&nbsp;&nbsp;&nbsp;ナレッジ】</th><td>jira</td><td>confluence</td><td></td><td></td><td></td><td></td><td></td></tr>
+                                    </table>
+                                </details>
+                            </div>
+                            <!-- ▼ WORKS：ADS -->
+                            <h2 class="works-item-name js--fade-title">国際規格翻訳 A-SPICE プロセス対応付け</h2>
+                            <div class="works-content js--fade-item">
+                                <img class="works-img" src="img/ADS/ADSサムネイル.png"/>
+                                    <p class="works-text">国際規格「Guidelines and recommendations for ADS safety requirements, assessments<br>
+                                        and test methods to inform regulatory development」）を英語から日本語へ翻訳。<br>
+                                        その概要を整理して構造的な理解を促すよう章立てや概念図を用いた資料を作成しました。<br>
+                                        その内容は、Level3以上（人監視不要）の自動運転機能を開発する安全性確立プロセスであり、<br>
+                                        国際的なODD（運行設計領域）に対応する要求事項が体系的にまとめられています<br>
+                                        私はこれらの内容を開発チームが実務で活用できるよう、<br>
+                                        ・安全要求の抽出<br>
+                                        ・評価手法の整理<br>
+                                        ・試験プロセスの流れの可視化<br>
+                                        ・A-SPICEとの比較<br>
+                                        といった観点で再構成し、プロジェクト内で共有可能なナレッジとして文書化しました。<br><br>
+                                        &nbsp;&nbsp;国際規格link（外部サイト）：<a href="https://unece.org/transport/publications/guidelines-and-recommendations-ads-safety-requirements-assessments-and-test">Guidelines and recommendations for ADS safety requirements, assessments and test methods to inform regulatory development</a></p>
+                            </div>
+                            <div class="works-content js--fade-item">
+                                <div class="works-icon"><img src="./img/utirity/Check矢印.png" /></div>
+                                <h2 class="works-item-name js--fade-title">Check!</h2>                                
+                                <details>
+                                <summary class="works-summary">もっと見る</summary>
+                                <div class="works-content">
+                                    <div class="works-vertical-align">
+                                        <iframe class="works-image-middle" src="https://docs.google.com/presentation/d/e/2PACX-1vRQaXu2fzyJYkNIf31qpLjvKGuXoCigRZE0WFo8lGCowTSCyF6oF4EdHKu0YJpPbw/pubembed?start=true&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                                        <p class="works-text">🔺 資料抜粋</p>
+                                    </div>
+                                    <div class="works-vertical-align">
+                                        <p class="works-text">・専門用語（安全要求、評価手法、ODD など）を国内の自動運転開発文脈に合わせて適切に意訳<br>
+                                            ・200ページ超の規格内容を章ごとに整理し、理解しやすい構造へ再編成<br>
+                                            ・Level 3 以上の自動運転システムに必要な安全性確立プロセスを抽出し、要点をまとめた資料を作成<br>
+                                            ・海外規格との整合性や差分を確認し、開発チームが実務で活用できる形に落とし込み<br>
+                                            ・複雑な評価手法・試験方法を図解化し、非専門メンバーでも理解できる資料に改善<br></p>
+                                        <img class="works-img-small" src="img/ADS/ADSアプローチ.png"/>
+                                    </div>
                                 </div>
-                                <p class="works-name">SOTIF</p>
-                                <p class="works-info">Legal Standard / Documentation / Process Mapping</p>
-                            </a>
-
-                            
-                            <a class="works-item" href="works.html">
-                                <div class="works-img"><img
-                                        src="img/screenshot1.png"
-                                        alt /></div>
-                                <p class="works-name">PC貸出管理アプリ</p>
-                                <p class="works-info">Design /
-                                    Coding(Responsive)</p>
-                            </a>
+                                </details>
+                            </div>
+                            <!-- ▼ WORKS：SOTIF -->
+                            <h2 class="works-item-name js--fade-title">SOTIF</h2>
+                            <div class="works-content js--fade-item">
+                                <img class="works-img" src="img/SOTIF/SOTIF.png" class="works-img" />
+                                <p class="works-text">国際規格</p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -255,8 +324,8 @@
                 </section>
                 <!-- /skill -->
 
-                <!-- about -->
-                <section class="about section" id="about">
+                <!-- ABOUT -->
+                <section class="ABOUT section" id="ABOUT">
                     <div class="container">
                         <h2 class="title">ABOUT</h2>
                         <div class="profile">
@@ -295,7 +364,7 @@
                         </div>
                     </div>
                 </section>
-                <!-- /about -->
+                <!-- /ABOUT -->
 
                 <!-- footer -->
                 <footer class="footer">
